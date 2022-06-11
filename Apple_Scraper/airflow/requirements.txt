@@ -1,0 +1,9 @@
+boto3
+botocore
+pandas
+bs4
+beautifulsoup4
+datetime
+requests
+urllib3
+selenium
