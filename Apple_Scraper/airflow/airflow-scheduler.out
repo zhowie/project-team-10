@@ -1,0 +1,173 @@
+[[34m2022-06-09 20:26:12,929[0m] {[34mscheduler_job.py:[0m696} INFO[0m - Starting the scheduler[0m
+[[34m2022-06-09 20:26:12,930[0m] {[34mscheduler_job.py:[0m701} INFO[0m - Processing each file at most -1 times[0m
+[[34m2022-06-09 20:26:12,932[0m] {[34mexecutor_loader.py:[0m105} INFO[0m - Loaded executor: SequentialExecutor[0m
+[[34m2022-06-09 20:26:12,934[0m] {[34mmanager.py:[0m160} INFO[0m - Launched DagFileProcessorManager with pid: 22719[0m
+[[34m2022-06-09 20:26:12,940[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 20:26:13,203[0m] {[34msettings.py:[0m55} INFO[0m - Configured default timezone Timezone('UTC')[0m
+[2022-06-09 20:26:13,205] {manager.py:406} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2022-06-09 20:27:53,590[0m] {[34mdag.py:[0m2927} INFO[0m - Setting next_dagrun for S3_UPLOAD to 2022-06-10T00:00:00+00:00, run_after=2022-06-11T00:00:00+00:00[0m
+[[34m2022-06-09 20:27:53,605[0m] {[34mscheduler_job.py:[0m353} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: S3_UPLOAD.Running-Scrapper-Apple-Jobs scheduled__2022-06-09T00:00:00+00:00 [scheduled]>[0m
+[[34m2022-06-09 20:27:53,605[0m] {[34mscheduler_job.py:[0m418} INFO[0m - DAG S3_UPLOAD has 0/16 running and queued tasks[0m
+[[34m2022-06-09 20:27:53,606[0m] {[34mscheduler_job.py:[0m504} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: S3_UPLOAD.Running-Scrapper-Apple-Jobs scheduled__2022-06-09T00:00:00+00:00 [scheduled]>[0m
+[[34m2022-06-09 20:27:53,607[0m] {[34mscheduler_job.py:[0m546} INFO[0m - Sending TaskInstanceKey(dag_id='S3_UPLOAD', task_id='Running-Scrapper-Apple-Jobs', run_id='scheduled__2022-06-09T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default[0m
+[[34m2022-06-09 20:27:53,607[0m] {[34mbase_executor.py:[0m91} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'S3_UPLOAD', 'Running-Scrapper-Apple-Jobs', 'scheduled__2022-06-09T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/local_to_s3.py'][0m
+[[34m2022-06-09 20:27:53,608[0m] {[34msequential_executor.py:[0m59} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'S3_UPLOAD', 'Running-Scrapper-Apple-Jobs', 'scheduled__2022-06-09T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/local_to_s3.py'][0m
+[[34m2022-06-09 20:27:53,913[0m] {[34mdagbag.py:[0m507} INFO[0m - Filling up the DagBag from /Users/williamsalinas/airflow/dags/local_to_s3.py[0m
+[[34m2022-06-09 20:27:54,069[0m] {[34mtask_command.py:[0m370} INFO[0m - Running <TaskInstance: S3_UPLOAD.Running-Scrapper-Apple-Jobs scheduled__2022-06-09T00:00:00+00:00 [queued]> on host williams-mbp.socal.rr.com[0m
+[[34m2022-06-09 20:32:11,470[0m] {[34mscheduler_job.py:[0m599} INFO[0m - Executor reports execution of S3_UPLOAD.Running-Scrapper-Apple-Jobs run_id=scheduled__2022-06-09T00:00:00+00:00 exited with status success for try_number 1[0m
+[[34m2022-06-09 20:32:11,478[0m] {[34mscheduler_job.py:[0m643} INFO[0m - TaskInstance Finished: dag_id=S3_UPLOAD, task_id=Running-Scrapper-Apple-Jobs, run_id=scheduled__2022-06-09T00:00:00+00:00, map_index=-1, run_start_date=2022-06-10 03:27:54.086478+00:00, run_end_date=2022-06-10 03:32:11.348661+00:00, run_duration=257.262183, state=success, executor_state=success, try_number=1, max_tries=1, job_id=18, pool=default_pool, queue=default, priority_weight=3, operator=PythonOperator, queued_dttm=2022-06-10 03:27:53.606549+00:00, queued_by_job_id=17, pid=22840[0m
+[[34m2022-06-09 20:32:11,490[0m] {[34mmanager.py:[0m299} ERROR[0m - DagFileProcessorManager (PID=22719) last sent a heartbeat 257.91 seconds ago! Restarting it[0m
+[[34m2022-06-09 20:32:11,494[0m] {[34mprocess_utils.py:[0m125} INFO[0m - Sending Signals.SIGTERM to group 22719. PIDs of all processes in the group: [22719][0m
+[[34m2022-06-09 20:32:11,494[0m] {[34mprocess_utils.py:[0m80} INFO[0m - Sending the signal Signals.SIGTERM to group 22719[0m
+[[34m2022-06-09 20:32:11,590[0m] {[34mprocess_utils.py:[0m75} INFO[0m - Process psutil.Process(pid=22719, status='terminated', exitcode=0, started='20:26:12') (22719) terminated with exit code 0[0m
+[[34m2022-06-09 20:32:11,594[0m] {[34mmanager.py:[0m160} INFO[0m - Launched DagFileProcessorManager with pid: 23076[0m
+[[34m2022-06-09 20:32:11,603[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 20:32:11,605[0m] {[34mscheduler_job.py:[0m1244} INFO[0m - Marked 1 SchedulerJob instances as failed[0m
+[[34m2022-06-09 20:32:11,948[0m] {[34msettings.py:[0m55} INFO[0m - Configured default timezone Timezone('UTC')[0m
+[2022-06-09 20:32:11,950] {manager.py:406} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2022-06-09 20:32:12,409[0m] {[34mscheduler_job.py:[0m353} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: S3_UPLOAD.S3-Using-Python scheduled__2022-06-09T00:00:00+00:00 [scheduled]>[0m
+[[34m2022-06-09 20:32:12,409[0m] {[34mscheduler_job.py:[0m418} INFO[0m - DAG S3_UPLOAD has 0/16 running and queued tasks[0m
+[[34m2022-06-09 20:32:12,410[0m] {[34mscheduler_job.py:[0m504} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: S3_UPLOAD.S3-Using-Python scheduled__2022-06-09T00:00:00+00:00 [scheduled]>[0m
+[[34m2022-06-09 20:32:12,410[0m] {[34mscheduler_job.py:[0m546} INFO[0m - Sending TaskInstanceKey(dag_id='S3_UPLOAD', task_id='S3-Using-Python', run_id='scheduled__2022-06-09T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default[0m
+[[34m2022-06-09 20:32:12,411[0m] {[34mbase_executor.py:[0m91} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'S3_UPLOAD', 'S3-Using-Python', 'scheduled__2022-06-09T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/local_to_s3.py'][0m
+[[34m2022-06-09 20:32:12,411[0m] {[34msequential_executor.py:[0m59} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'S3_UPLOAD', 'S3-Using-Python', 'scheduled__2022-06-09T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/local_to_s3.py'][0m
+[[34m2022-06-09 20:32:12,700[0m] {[34mdagbag.py:[0m507} INFO[0m - Filling up the DagBag from /Users/williamsalinas/airflow/dags/local_to_s3.py[0m
+[[34m2022-06-09 20:32:12,795[0m] {[34mtask_command.py:[0m370} INFO[0m - Running <TaskInstance: S3_UPLOAD.S3-Using-Python scheduled__2022-06-09T00:00:00+00:00 [queued]> on host williams-mbp.socal.rr.com[0m
+[[34m2022-06-09 20:32:15,362[0m] {[34mscheduler_job.py:[0m599} INFO[0m - Executor reports execution of S3_UPLOAD.S3-Using-Python run_id=scheduled__2022-06-09T00:00:00+00:00 exited with status success for try_number 1[0m
+[[34m2022-06-09 20:32:15,365[0m] {[34mscheduler_job.py:[0m643} INFO[0m - TaskInstance Finished: dag_id=S3_UPLOAD, task_id=S3-Using-Python, run_id=scheduled__2022-06-09T00:00:00+00:00, map_index=-1, run_start_date=2022-06-10 03:32:12.806269+00:00, run_end_date=2022-06-10 03:32:15.211972+00:00, run_duration=2.405703, state=success, executor_state=success, try_number=1, max_tries=1, job_id=19, pool=default_pool, queue=default, priority_weight=2, operator=PythonOperator, queued_dttm=2022-06-10 03:32:12.410329+00:00, queued_by_job_id=17, pid=23080[0m
+[[34m2022-06-09 20:32:15,712[0m] {[34mscheduler_job.py:[0m353} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: S3_UPLOAD.Redshift-Using-Python scheduled__2022-06-09T00:00:00+00:00 [scheduled]>[0m
+[[34m2022-06-09 20:32:15,712[0m] {[34mscheduler_job.py:[0m418} INFO[0m - DAG S3_UPLOAD has 0/16 running and queued tasks[0m
+[[34m2022-06-09 20:32:15,713[0m] {[34mscheduler_job.py:[0m504} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: S3_UPLOAD.Redshift-Using-Python scheduled__2022-06-09T00:00:00+00:00 [scheduled]>[0m
+[[34m2022-06-09 20:32:15,713[0m] {[34mscheduler_job.py:[0m546} INFO[0m - Sending TaskInstanceKey(dag_id='S3_UPLOAD', task_id='Redshift-Using-Python', run_id='scheduled__2022-06-09T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2022-06-09 20:32:15,714[0m] {[34mbase_executor.py:[0m91} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'S3_UPLOAD', 'Redshift-Using-Python', 'scheduled__2022-06-09T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/local_to_s3.py'][0m
+[[34m2022-06-09 20:32:15,714[0m] {[34msequential_executor.py:[0m59} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'S3_UPLOAD', 'Redshift-Using-Python', 'scheduled__2022-06-09T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/local_to_s3.py'][0m
+[[34m2022-06-09 20:32:15,988[0m] {[34mdagbag.py:[0m507} INFO[0m - Filling up the DagBag from /Users/williamsalinas/airflow/dags/local_to_s3.py[0m
+[[34m2022-06-09 20:32:16,055[0m] {[34mtask_command.py:[0m370} INFO[0m - Running <TaskInstance: S3_UPLOAD.Redshift-Using-Python scheduled__2022-06-09T00:00:00+00:00 [queued]> on host williams-mbp.socal.rr.com[0m
+[[34m2022-06-09 20:32:17,259[0m] {[34mscheduler_job.py:[0m599} INFO[0m - Executor reports execution of S3_UPLOAD.Redshift-Using-Python run_id=scheduled__2022-06-09T00:00:00+00:00 exited with status success for try_number 1[0m
+[[34m2022-06-09 20:32:17,264[0m] {[34mscheduler_job.py:[0m643} INFO[0m - TaskInstance Finished: dag_id=S3_UPLOAD, task_id=Redshift-Using-Python, run_id=scheduled__2022-06-09T00:00:00+00:00, map_index=-1, run_start_date=2022-06-10 03:32:16.066794+00:00, run_end_date=2022-06-10 03:32:17.115370+00:00, run_duration=1.048576, state=success, executor_state=success, try_number=1, max_tries=1, job_id=20, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2022-06-10 03:32:15.713383+00:00, queued_by_job_id=17, pid=23083[0m
+[[34m2022-06-09 20:32:17,599[0m] {[34mdagrun.py:[0m562} INFO[0m - Marking run <DagRun S3_UPLOAD @ 2022-06-09 00:00:00+00:00: scheduled__2022-06-09T00:00:00+00:00, externally triggered: False> successful[0m
+[[34m2022-06-09 20:32:17,600[0m] {[34mdagrun.py:[0m607} INFO[0m - DagRun Finished: dag_id=S3_UPLOAD, execution_date=2022-06-09 00:00:00+00:00, run_id=scheduled__2022-06-09T00:00:00+00:00, run_start_date=2022-06-10 03:27:53.593638+00:00, run_end_date=2022-06-10 03:32:17.600909+00:00, run_duration=264.007271, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2022-06-09 00:00:00+00:00, data_interval_end=2022-06-10 00:00:00+00:00, dag_hash=fe17a53d29724429cbd12274dde99714[0m
+[[34m2022-06-09 20:32:17,603[0m] {[34mdag.py:[0m2927} INFO[0m - Setting next_dagrun for S3_UPLOAD to 2022-06-10T00:00:00+00:00, run_after=2022-06-11T00:00:00+00:00[0m
+[[34m2022-06-09 20:37:11,635[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 20:42:11,768[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 20:47:11,806[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 20:52:12,197[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 20:57:12,232[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 21:02:12,270[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 21:07:12,305[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 21:12:12,357[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 21:17:12,612[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 21:22:12,826[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 21:27:12,874[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 21:32:12,922[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 21:37:12,973[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 21:42:12,958[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 21:47:13,344[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 21:52:13,376[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 21:57:13,422[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 22:02:13,467[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 22:07:13,495[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 22:12:13,516[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 22:17:13,545[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 22:22:13,585[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 22:27:13,626[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 22:32:13,673[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 22:37:13,861[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 22:42:13,899[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 22:47:13,936[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 22:52:13,969[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 22:57:14,005[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 23:02:14,047[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 23:07:14,162[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 23:12:14,200[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 23:17:14,222[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 23:18:39,058[0m] {[34mscheduler_job.py:[0m353} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: S3_UPLOAD.Running-Scrapper-Apple-Jobs manual__2022-06-10T06:18:37.238473+00:00 [scheduled]>[0m
+[[34m2022-06-09 23:18:39,059[0m] {[34mscheduler_job.py:[0m418} INFO[0m - DAG S3_UPLOAD has 0/16 running and queued tasks[0m
+[[34m2022-06-09 23:18:39,060[0m] {[34mscheduler_job.py:[0m504} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: S3_UPLOAD.Running-Scrapper-Apple-Jobs manual__2022-06-10T06:18:37.238473+00:00 [scheduled]>[0m
+[[34m2022-06-09 23:18:39,062[0m] {[34mscheduler_job.py:[0m546} INFO[0m - Sending TaskInstanceKey(dag_id='S3_UPLOAD', task_id='Running-Scrapper-Apple-Jobs', run_id='manual__2022-06-10T06:18:37.238473+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default[0m
+[[34m2022-06-09 23:18:39,063[0m] {[34mbase_executor.py:[0m91} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'S3_UPLOAD', 'Running-Scrapper-Apple-Jobs', 'manual__2022-06-10T06:18:37.238473+00:00', '--local', '--subdir', 'DAGS_FOLDER/local_to_s3.py'][0m
+[[34m2022-06-09 23:18:39,064[0m] {[34msequential_executor.py:[0m59} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'S3_UPLOAD', 'Running-Scrapper-Apple-Jobs', 'manual__2022-06-10T06:18:37.238473+00:00', '--local', '--subdir', 'DAGS_FOLDER/local_to_s3.py'][0m
+[[34m2022-06-09 23:18:39,463[0m] {[34mdagbag.py:[0m507} INFO[0m - Filling up the DagBag from /Users/williamsalinas/airflow/dags/local_to_s3.py[0m
+[[34m2022-06-09 23:18:39,644[0m] {[34mtask_command.py:[0m370} INFO[0m - Running <TaskInstance: S3_UPLOAD.Running-Scrapper-Apple-Jobs manual__2022-06-10T06:18:37.238473+00:00 [queued]> on host williams-mbp.socal.rr.com[0m
+[[34m2022-06-09 23:23:23,587[0m] {[34mscheduler_job.py:[0m599} INFO[0m - Executor reports execution of S3_UPLOAD.Running-Scrapper-Apple-Jobs run_id=manual__2022-06-10T06:18:37.238473+00:00 exited with status success for try_number 1[0m
+[[34m2022-06-09 23:23:23,593[0m] {[34mscheduler_job.py:[0m643} INFO[0m - TaskInstance Finished: dag_id=S3_UPLOAD, task_id=Running-Scrapper-Apple-Jobs, run_id=manual__2022-06-10T06:18:37.238473+00:00, map_index=-1, run_start_date=2022-06-10 06:18:39.659281+00:00, run_end_date=2022-06-10 06:23:23.458149+00:00, run_duration=283.798868, state=up_for_retry, executor_state=success, try_number=1, max_tries=1, job_id=21, pool=default_pool, queue=default, priority_weight=3, operator=PythonOperator, queued_dttm=2022-06-10 06:18:39.061108+00:00, queued_by_job_id=17, pid=30831[0m
+[[34m2022-06-09 23:23:23,604[0m] {[34mmanager.py:[0m299} ERROR[0m - DagFileProcessorManager (PID=23076) last sent a heartbeat 284.58 seconds ago! Restarting it[0m
+[[34m2022-06-09 23:23:23,608[0m] {[34mprocess_utils.py:[0m125} INFO[0m - Sending Signals.SIGTERM to group 23076. PIDs of all processes in the group: [23076][0m
+[[34m2022-06-09 23:23:23,609[0m] {[34mprocess_utils.py:[0m80} INFO[0m - Sending the signal Signals.SIGTERM to group 23076[0m
+[[34m2022-06-09 23:23:23,704[0m] {[34mprocess_utils.py:[0m75} INFO[0m - Process psutil.Process(pid=23076, status='terminated', exitcode=0, started='20:32:11') (23076) terminated with exit code 0[0m
+[[34m2022-06-09 23:23:23,707[0m] {[34mmanager.py:[0m160} INFO[0m - Launched DagFileProcessorManager with pid: 31070[0m
+[[34m2022-06-09 23:23:23,716[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 23:23:23,717[0m] {[34mscheduler_job.py:[0m1244} INFO[0m - Marked 1 SchedulerJob instances as failed[0m
+[[34m2022-06-09 23:23:24,063[0m] {[34msettings.py:[0m55} INFO[0m - Configured default timezone Timezone('UTC')[0m
+[2022-06-09 23:23:24,065] {manager.py:406} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2022-06-09 23:23:28,661[0m] {[34mscheduler_job.py:[0m353} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: S3_UPLOAD.Running-Scrapper-Apple-Jobs manual__2022-06-10T06:18:37.238473+00:00 [scheduled]>[0m
+[[34m2022-06-09 23:23:28,661[0m] {[34mscheduler_job.py:[0m418} INFO[0m - DAG S3_UPLOAD has 0/16 running and queued tasks[0m
+[[34m2022-06-09 23:23:28,661[0m] {[34mscheduler_job.py:[0m504} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: S3_UPLOAD.Running-Scrapper-Apple-Jobs manual__2022-06-10T06:18:37.238473+00:00 [scheduled]>[0m
+[[34m2022-06-09 23:23:28,662[0m] {[34mscheduler_job.py:[0m546} INFO[0m - Sending TaskInstanceKey(dag_id='S3_UPLOAD', task_id='Running-Scrapper-Apple-Jobs', run_id='manual__2022-06-10T06:18:37.238473+00:00', try_number=2, map_index=-1) to executor with priority 3 and queue default[0m
+[[34m2022-06-09 23:23:28,662[0m] {[34mbase_executor.py:[0m91} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'S3_UPLOAD', 'Running-Scrapper-Apple-Jobs', 'manual__2022-06-10T06:18:37.238473+00:00', '--local', '--subdir', 'DAGS_FOLDER/local_to_s3.py'][0m
+[[34m2022-06-09 23:23:28,663[0m] {[34msequential_executor.py:[0m59} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'S3_UPLOAD', 'Running-Scrapper-Apple-Jobs', 'manual__2022-06-10T06:18:37.238473+00:00', '--local', '--subdir', 'DAGS_FOLDER/local_to_s3.py'][0m
+[[34m2022-06-09 23:23:28,950[0m] {[34mdagbag.py:[0m507} INFO[0m - Filling up the DagBag from /Users/williamsalinas/airflow/dags/local_to_s3.py[0m
+[[34m2022-06-09 23:23:29,043[0m] {[34mtask_command.py:[0m370} INFO[0m - Running <TaskInstance: S3_UPLOAD.Running-Scrapper-Apple-Jobs manual__2022-06-10T06:18:37.238473+00:00 [queued]> on host williams-mbp.socal.rr.com[0m
+[[34m2022-06-09 23:27:48,389[0m] {[34mscheduler_job.py:[0m599} INFO[0m - Executor reports execution of S3_UPLOAD.Running-Scrapper-Apple-Jobs run_id=manual__2022-06-10T06:18:37.238473+00:00 exited with status success for try_number 2[0m
+[[34m2022-06-09 23:27:48,394[0m] {[34mscheduler_job.py:[0m643} INFO[0m - TaskInstance Finished: dag_id=S3_UPLOAD, task_id=Running-Scrapper-Apple-Jobs, run_id=manual__2022-06-10T06:18:37.238473+00:00, map_index=-1, run_start_date=2022-06-10 06:23:29.054899+00:00, run_end_date=2022-06-10 06:27:48.266791+00:00, run_duration=259.211892, state=success, executor_state=success, try_number=2, max_tries=1, job_id=22, pool=default_pool, queue=default, priority_weight=3, operator=PythonOperator, queued_dttm=2022-06-10 06:23:28.662247+00:00, queued_by_job_id=17, pid=31078[0m
+[[34m2022-06-09 23:27:48,405[0m] {[34mmanager.py:[0m299} ERROR[0m - DagFileProcessorManager (PID=31070) last sent a heartbeat 259.75 seconds ago! Restarting it[0m
+[[34m2022-06-09 23:27:48,409[0m] {[34mprocess_utils.py:[0m125} INFO[0m - Sending Signals.SIGTERM to group 31070. PIDs of all processes in the group: [31070][0m
+[[34m2022-06-09 23:27:48,410[0m] {[34mprocess_utils.py:[0m80} INFO[0m - Sending the signal Signals.SIGTERM to group 31070[0m
+[[34m2022-06-09 23:27:48,506[0m] {[34mprocess_utils.py:[0m75} INFO[0m - Process psutil.Process(pid=31070, status='terminated', exitcode=0, started='23:23:23') (31070) terminated with exit code 0[0m
+[[34m2022-06-09 23:27:48,509[0m] {[34mmanager.py:[0m160} INFO[0m - Launched DagFileProcessorManager with pid: 31409[0m
+[[34m2022-06-09 23:27:48,874[0m] {[34msettings.py:[0m55} INFO[0m - Configured default timezone Timezone('UTC')[0m
+[2022-06-09 23:27:48,877] {manager.py:406} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2022-06-09 23:27:49,230[0m] {[34mscheduler_job.py:[0m353} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: S3_UPLOAD.S3-Using-Python manual__2022-06-10T06:18:37.238473+00:00 [scheduled]>[0m
+[[34m2022-06-09 23:27:49,231[0m] {[34mscheduler_job.py:[0m418} INFO[0m - DAG S3_UPLOAD has 0/16 running and queued tasks[0m
+[[34m2022-06-09 23:27:49,231[0m] {[34mscheduler_job.py:[0m504} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: S3_UPLOAD.S3-Using-Python manual__2022-06-10T06:18:37.238473+00:00 [scheduled]>[0m
+[[34m2022-06-09 23:27:49,232[0m] {[34mscheduler_job.py:[0m546} INFO[0m - Sending TaskInstanceKey(dag_id='S3_UPLOAD', task_id='S3-Using-Python', run_id='manual__2022-06-10T06:18:37.238473+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default[0m
+[[34m2022-06-09 23:27:49,232[0m] {[34mbase_executor.py:[0m91} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'S3_UPLOAD', 'S3-Using-Python', 'manual__2022-06-10T06:18:37.238473+00:00', '--local', '--subdir', 'DAGS_FOLDER/local_to_s3.py'][0m
+[[34m2022-06-09 23:27:49,233[0m] {[34msequential_executor.py:[0m59} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'S3_UPLOAD', 'S3-Using-Python', 'manual__2022-06-10T06:18:37.238473+00:00', '--local', '--subdir', 'DAGS_FOLDER/local_to_s3.py'][0m
+[[34m2022-06-09 23:27:49,522[0m] {[34mdagbag.py:[0m507} INFO[0m - Filling up the DagBag from /Users/williamsalinas/airflow/dags/local_to_s3.py[0m
+[[34m2022-06-09 23:27:49,624[0m] {[34mtask_command.py:[0m370} INFO[0m - Running <TaskInstance: S3_UPLOAD.S3-Using-Python manual__2022-06-10T06:18:37.238473+00:00 [queued]> on host williams-mbp.socal.rr.com[0m
+[[34m2022-06-09 23:27:51,002[0m] {[34mscheduler_job.py:[0m599} INFO[0m - Executor reports execution of S3_UPLOAD.S3-Using-Python run_id=manual__2022-06-10T06:18:37.238473+00:00 exited with status success for try_number 1[0m
+[[34m2022-06-09 23:27:51,006[0m] {[34mscheduler_job.py:[0m643} INFO[0m - TaskInstance Finished: dag_id=S3_UPLOAD, task_id=S3-Using-Python, run_id=manual__2022-06-10T06:18:37.238473+00:00, map_index=-1, run_start_date=2022-06-10 06:27:49.635562+00:00, run_end_date=2022-06-10 06:27:50.856121+00:00, run_duration=1.220559, state=success, executor_state=success, try_number=1, max_tries=1, job_id=23, pool=default_pool, queue=default, priority_weight=2, operator=PythonOperator, queued_dttm=2022-06-10 06:27:49.231689+00:00, queued_by_job_id=17, pid=31414[0m
+[[34m2022-06-09 23:27:51,355[0m] {[34mscheduler_job.py:[0m353} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: S3_UPLOAD.Redshift-Using-Python manual__2022-06-10T06:18:37.238473+00:00 [scheduled]>[0m
+[[34m2022-06-09 23:27:51,356[0m] {[34mscheduler_job.py:[0m418} INFO[0m - DAG S3_UPLOAD has 0/16 running and queued tasks[0m
+[[34m2022-06-09 23:27:51,356[0m] {[34mscheduler_job.py:[0m504} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: S3_UPLOAD.Redshift-Using-Python manual__2022-06-10T06:18:37.238473+00:00 [scheduled]>[0m
+[[34m2022-06-09 23:27:51,357[0m] {[34mscheduler_job.py:[0m546} INFO[0m - Sending TaskInstanceKey(dag_id='S3_UPLOAD', task_id='Redshift-Using-Python', run_id='manual__2022-06-10T06:18:37.238473+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2022-06-09 23:27:51,357[0m] {[34mbase_executor.py:[0m91} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'S3_UPLOAD', 'Redshift-Using-Python', 'manual__2022-06-10T06:18:37.238473+00:00', '--local', '--subdir', 'DAGS_FOLDER/local_to_s3.py'][0m
+[[34m2022-06-09 23:27:51,358[0m] {[34msequential_executor.py:[0m59} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'S3_UPLOAD', 'Redshift-Using-Python', 'manual__2022-06-10T06:18:37.238473+00:00', '--local', '--subdir', 'DAGS_FOLDER/local_to_s3.py'][0m
+[[34m2022-06-09 23:27:51,644[0m] {[34mdagbag.py:[0m507} INFO[0m - Filling up the DagBag from /Users/williamsalinas/airflow/dags/local_to_s3.py[0m
+[[34m2022-06-09 23:27:51,713[0m] {[34mtask_command.py:[0m370} INFO[0m - Running <TaskInstance: S3_UPLOAD.Redshift-Using-Python manual__2022-06-10T06:18:37.238473+00:00 [queued]> on host williams-mbp.socal.rr.com[0m
+[[34m2022-06-09 23:27:52,938[0m] {[34mscheduler_job.py:[0m599} INFO[0m - Executor reports execution of S3_UPLOAD.Redshift-Using-Python run_id=manual__2022-06-10T06:18:37.238473+00:00 exited with status success for try_number 1[0m
+[[34m2022-06-09 23:27:52,941[0m] {[34mscheduler_job.py:[0m643} INFO[0m - TaskInstance Finished: dag_id=S3_UPLOAD, task_id=Redshift-Using-Python, run_id=manual__2022-06-10T06:18:37.238473+00:00, map_index=-1, run_start_date=2022-06-10 06:27:51.724631+00:00, run_end_date=2022-06-10 06:27:52.831268+00:00, run_duration=1.106637, state=success, executor_state=success, try_number=1, max_tries=1, job_id=24, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2022-06-10 06:27:51.356927+00:00, queued_by_job_id=17, pid=31427[0m
+[[34m2022-06-09 23:27:53,330[0m] {[34mdagrun.py:[0m562} INFO[0m - Marking run <DagRun S3_UPLOAD @ 2022-06-10 06:18:37.238473+00:00: manual__2022-06-10T06:18:37.238473+00:00, externally triggered: True> successful[0m
+[[34m2022-06-09 23:27:53,330[0m] {[34mdagrun.py:[0m607} INFO[0m - DagRun Finished: dag_id=S3_UPLOAD, execution_date=2022-06-10 06:18:37.238473+00:00, run_id=manual__2022-06-10T06:18:37.238473+00:00, run_start_date=2022-06-10 06:18:39.037418+00:00, run_end_date=2022-06-10 06:27:53.330957+00:00, run_duration=554.293539, state=success, external_trigger=True, run_type=manual, data_interval_start=2022-06-09 00:00:00+00:00, data_interval_end=2022-06-10 00:00:00+00:00, dag_hash=fe17a53d29724429cbd12274dde99714[0m
+[[34m2022-06-09 23:27:53,332[0m] {[34mdag.py:[0m2927} INFO[0m - Setting next_dagrun for S3_UPLOAD to 2022-06-10T00:00:00+00:00, run_after=2022-06-11T00:00:00+00:00[0m
+[[34m2022-06-09 23:28:24,168[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 23:33:24,173[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 23:38:24,215[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 23:43:24,260[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 23:48:24,297[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 23:53:24,342[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-09 23:58:24,735[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-10 00:03:24,768[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-10 00:08:24,815[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-06-10 00:11:44,354[0m] {[34mscheduler_job.py:[0m179} INFO[0m - Exiting gracefully upon receiving signal 15[0m
+[[34m2022-06-10 00:11:44,767[0m] {[34mprocess_utils.py:[0m125} INFO[0m - Sending Signals.SIGTERM to group 31409. PIDs of all processes in the group: [][0m
+[[34m2022-06-10 00:11:44,769[0m] {[34mprocess_utils.py:[0m80} INFO[0m - Sending the signal Signals.SIGTERM to group 31409[0m
+[[34m2022-06-10 00:11:44,770[0m] {[34mprocess_utils.py:[0m94} INFO[0m - Sending the signal Signals.SIGTERM to process 31409 as process group is missing.[0m
+[[34m2022-06-10 00:11:44,772[0m] {[34mprocess_utils.py:[0m125} INFO[0m - Sending Signals.SIGTERM to group 31409. PIDs of all processes in the group: [][0m
+[[34m2022-06-10 00:11:44,773[0m] {[34mprocess_utils.py:[0m80} INFO[0m - Sending the signal Signals.SIGTERM to group 31409[0m
+[[34m2022-06-10 00:11:44,774[0m] {[34mprocess_utils.py:[0m94} INFO[0m - Sending the signal Signals.SIGTERM to process 31409 as process group is missing.[0m
+[[34m2022-06-10 00:11:44,776[0m] {[34mscheduler_job.py:[0m768} INFO[0m - Exited execute loop[0m
